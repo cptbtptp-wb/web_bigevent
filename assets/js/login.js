@@ -53,9 +53,10 @@ $(function () {
     $("#form_login").submit(function (e) {
         // 阻止默认提交行为
         e.preventDefault()
+        // console.log(11);
         $.ajax({
-            url: "http://www.liulongbin.top:3007/api/login",
             method: "POST",
+            url: "/api/login",
             // 快速获取表单中的数据
             data: $(this).serialize(),
             success: function (res) {
